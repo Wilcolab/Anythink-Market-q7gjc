@@ -9,4 +9,4 @@
     
 # done
 
-node backend/seeding.js
+yarn seeds
