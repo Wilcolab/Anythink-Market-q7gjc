@@ -73,6 +73,7 @@ router.get("/", auth.optional, function(req, res, next) {
 
       if(req.query.title) {
         query.title = req.query.title;
+        query.title = {title : { $regex : '.*' +  req.query.title + '.*'}  } ;
       }
 
       return Promise.all([
