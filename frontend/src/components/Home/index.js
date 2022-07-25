@@ -8,7 +8,7 @@ import {
   HOME_PAGE_LOADED,
   HOME_PAGE_UNLOADED,
   APPLY_TAG_FILTER,
-  CHANGE_TITLE_FILTER
+  CHANGE_TITLE_FILTER,
 } from "../../constants/actionTypes";
 
 const Promise = global.Promise;
@@ -30,7 +30,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 class Home extends React.Component {
-
   componentWillMount() {
     const tab = "all";
     const itemsPromise = agent.Items.all;
@@ -49,7 +48,7 @@ class Home extends React.Component {
   render() {
     return (
       <div className="home-page">
-        <Banner onChangeTitle={this.props.onChangeTitle}/>
+        <Banner onChangeTitle={this.props.onChangeTitle} />
 
         <div className="container page">
           <Tags tags={this.props.tags} onClickTag={this.props.onClickTag} />
