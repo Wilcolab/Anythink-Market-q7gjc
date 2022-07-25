@@ -28,7 +28,7 @@ const Banner = (props) => {
             type="text"
             id="search-box"
             onChange={handleChange}
-            placeholder="hmmm"
+            placeholder="search..."
           />
           <span> the cool stuff.</span>
         </div>

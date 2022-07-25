@@ -72,6 +72,11 @@ const mapDispatchToProps = (dispatch) => ({
 const MainView = (props) => {
   return (
     <div>
+      {props.items?.length === 0 && (
+        <div id="empty" className="container text-center">
+          no items found for {props.title}
+        </div>
+      )}
       <div className="feed-toggle">
         <ul className="nav nav-tabs">
           <YourFeedTab
